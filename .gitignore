@@ -1,0 +1,15 @@
+# Ignore everything, then allow config worth backing up.
+*
+
+!.gitignore
+!CLAUDE.md
+!settings.json
+!agents/
+!commands/
+!hooks/
+!output-styles/
+!keybindings.json
+
+# Never: local state, caches, credentials, transcripts.
+.credentials.json
+settings.local.json
