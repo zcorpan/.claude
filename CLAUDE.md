@@ -2,7 +2,8 @@
 
 - Never add a `Co-Authored-By:` trailer.
 - Backtick code in commit messages so they need no editing as PR body.
-- In WHATWG repos and wpt, prefix branches with `zcorpan/`.
+- In WHATWG repos and wpt, prefix branches with `zcorpan/`. Nowhere else: in my own repos, and
+  in others where I have push access, branch names take no prefix.
 - In WHATWG spec repos, follow
   [whatwg/meta's COMMITTING.md](https://github.com/whatwg/meta/blob/main/COMMITTING.md):
   title ≤72 chars, imperative mood, no period; blank line then description (omit for simple fixes). Reference issues with closing keywords only when actually resolved (prefer "Fixes"). Prefixes: `Editorial: ` (formatting/typos), `Meta: ` (ecosystem), `Review Draft Publication: `.
