@@ -65,8 +65,7 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 # Comments and replies
 
 - Reply via block quote + answer pairs. Multiple pairs in one comment, no connecting prose.
-- Procedural comments one line: "Suggest positive.", "Closing per #1896 (comment)", "Filed <url>", "Typo", "cc @foo".
-- Closing: give reason + link, not justification paragraph.
+- Short comments like "Typo" are fine.
 - Code review: prefer suggestion block over prose for easy fixes; add rationale only if non-obvious.
-- When suggesting fix, verify impact to avoid regressions.
+- When suggesting fix, verify impact carefully to avoid regressions.
 - Chat review findings: start with file:line/range (e.g., `source:126832-126843` at current HEAD), so you know where to leave comment. Say which commit.
