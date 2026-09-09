@@ -2,6 +2,9 @@
 
 - Never add a `Co-Authored-By:` trailer.
 - Backtick code in commit messages so they need no editing as PR body.
+- Keep commit messages short. The title usually says it; add a body only when it needs
+  explaining, and then 1-2 sentences at most. No bullet lists, no measurements, no
+  rationale essays.
 - In WHATWG repos and wpt, prefix branches with `zcorpan/`. Nowhere else: in my own repos, and
   in others where I have push access, branch names take no prefix.
 - In WHATWG spec repos, follow
