@@ -1,6 +1,5 @@
 # Git
 
-- Never add a `Co-Authored-By:` trailer.
 - Backtick code in commit messages so they need no editing as PR body.
 - Keep commit messages short. The title usually says it; add a body only when it needs
   explaining, and then 1-2 sentences at most. No bullet lists, no measurements, no
@@ -46,11 +45,12 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 
 # Writing wpt tests
 
-- Don't sync on parse-time inline script when behavior depends on algorithm resuming at microtask checkpoint (engines don't resume there). Poll instead: `await t.step_wait(() => video.currentSrc == source.src, 'desc', 3000, 5)` (adjust 100ms default as needed).
+- Await events/callbacks (wrap in a promise) rather than polling. Poll with `await t.step_wait(() => video.currentSrc == source.src, 'desc', 3000, 5)` (adjust 100ms default as needed) only for spec steps with no observable event, e.g. algorithm resuming at microtask checkpoint; don't sync those on parse-time inline script (engines don't resume there).
 - Prefer sync point tied to spec step over events (events queue at different step, engines disagree on order).
 - Sanity-check sync point: assert expected work is still pending, so test fails loudly if state is wrong.
 - New `resources/` handler knobs: add optional query param behind presence check (existing callers unaffected).
 - Test failing identically in all browsers for unrelated reason is worse than no test. Verify it would pass if feature were correct.
+- Link the single-page HTML spec (`https://html.spec.whatwg.org/#anchor`), not `/multipage/...`, in `<link rel=help>` and elsewhere.
 
 # Spec issues
 
@@ -63,6 +63,7 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - Live DOM Viewer demos: `https://software.hixie.ch/utilities/js/live-dom-viewer/?` + `encodeURIComponent(markup)`. Don't use `?saved=N`. Use `w()` not `console.log`. Link as `[demo](<permalink>)` (percent-encode `(` and `)`). Verify with `chrome --headless --virtual-time-budget=8000 --dump-dom "<url>"`.
 - LDV test files (unqualified): `delayed-image`, `delayed-script`, `image`, `null`, `script`, `style`, `document`, `alertdoc`, `svg`, `xml`, `xml-broken`, `xhtml`, `download`.
 - Never "all engines" or "all three". Name tested browsers/engines, pick one scheme, confirm channel: `./wpt run safari` (release), `--channel preview` (TP), check "Starting WebDriver:" if unsure.
+- Say "Safari TP" when the tested browser was Safari Technology Preview; plain "Safari" means release.
 - Chromium: <https://issues.chromium.org/issues/new?noWizard=true>. WebKit: `https://bugs.webkit.org/enter_bug.cgi?product=WebKit&component=<component>&short_desc=...&comment=...` (WAF blocks `<input`, `<iframe`, `<script`, `<body`, `<form`, `<svg`, `<textarea`, `<button`, `<object`, `<embed`, `<frame>`; `<a`, `<div`, `<p`, `<span`, `<math` pass; no Markdown). Pre-fill with `gh issue create --repo <org>/<repo> --web --title "..." --body-file <file>` (or `?title=`/`?body=` for YAML forms; check `.github/ISSUE_TEMPLATE/*.yml` for field ids).
 - Don't put LDV permalinks in impl bugs. Link wpt test or describe repro + attach test file.
 
