@@ -1,13 +1,13 @@
 {
+  "attribution": {
+    "pr": ""
+  },
   "permissions": {
     "defaultMode": "auto"
   },
+  "model": "claude-fable-5-1[1m]",
   "enabledPlugins": {},
   "extraKnownMarketplaces": {},
   "theme": "dark",
-  "switchModelsOnFlag": false,
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  }
+  "switchModelsOnFlag": false
 }
