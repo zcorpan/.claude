@@ -51,6 +51,7 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - New `resources/` handler knobs: add optional query param behind presence check (existing callers unaffected).
 - Test failing identically in all browsers for unrelated reason is worse than no test. Verify it would pass if feature were correct.
 - Link the single-page HTML spec (`https://html.spec.whatwg.org/#anchor`), not `/multipage/...`, in `<link rel=help>` and elsewhere.
+- Give each media/image resource in a test a distinct URL (add a query string) so a cached copy can't make a lazy resource load eagerly.
 
 # Spec issues
 
