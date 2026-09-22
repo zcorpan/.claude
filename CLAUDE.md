@@ -52,6 +52,7 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - Test failing identically in all browsers for unrelated reason is worse than no test. Verify it would pass if feature were correct.
 - Link the single-page HTML spec (`https://html.spec.whatwg.org/#anchor`), not `/multipage/...`, in `<link rel=help>` and elsewhere.
 - Give each media/image resource in a test a distinct URL (add a query string) so a cached copy can't make a lazy resource load eagerly.
+- Don't listen for `load` on a parser-inserted iframe/img from a later script; it may already have fired. Await the window `load` event instead (such elements delay it).
 - Don't add code comments unless really necessary for understanding.
 
 # Spec issues
