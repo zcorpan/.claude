@@ -1,5 +1,6 @@
 # Git
 
+- Commit title ≤72 chars, imperative mood, no period. Applies in every repo.
 - Backtick code in commit messages so they need no editing as PR body.
 - Keep commit messages short. The title usually says it; add a body only when it needs
   explaining, and then 1-2 sentences at most. No bullet lists, no measurements, no
@@ -8,7 +9,7 @@
   in others where I have push access, branch names take no prefix.
 - In WHATWG spec repos, follow
   [whatwg/meta's COMMITTING.md](https://github.com/whatwg/meta/blob/main/COMMITTING.md):
-  title ≤72 chars, imperative mood, no period; blank line then description (omit for simple fixes). Reference issues with closing keywords only when actually resolved (prefer "Fixes"). Prefixes: `Editorial: ` (formatting/typos), `Meta: ` (ecosystem), `Review Draft Publication: `.
+  blank line then description (omit for simple fixes). Reference issues with closing keywords only when actually resolved (prefer "Fixes"). Prefixes: `Editorial: ` (formatting/typos), `Meta: ` (ecosystem), `Review Draft Publication: `.
 
 # Writing
 
