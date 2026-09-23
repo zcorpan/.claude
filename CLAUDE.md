@@ -66,6 +66,7 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - One issue per issue, cut tangents. If a second problem appears, file separately instead of "Related" paragraph.
 - Problem + evidence, stop. One hedged sentence for fix is OK. Keep refs terse: "(Found in #123.)" not a clause.
 - Verify fix impact carefully to avoid regressions.
+- Issues containing an AI-drafted plan: open with a first-person paragraph (not `<details>`) saying it was drafted with Claude Code (model name), what was explored, and which decisions I made; then put the whole plan in a block quote. Example: validator/validator#2143.
 - Quote spec as block quote (colon intro, "...and " continuation), not inline.
 - Hedge implementation claims: "appear to run" not "runs". Report observed behavior, not code.
 - If problem is spec-only and no browser distinguishes, omit browsers entirely. Don't report "couldn't reproduce".
