@@ -34,7 +34,11 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - Throwaway test in scratch dir: `assert_true(false, '\n' + log.join('\n'))` to dump observations. Record sync, microtask, task, rAF, event handlers in one run. Delete scratch dir and verify with `git status`.
 - `./wpt run --no-pause --yes --binary "<path>" <product> <paths>` (`--yes` skips webdriver prompt, `--no-pause` stops hanging).
 - Local browsers: `/Applications/Firefox Nightly.app/Contents/MacOS/firefox` (`firefox`), `/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary` (`chrome`), `--webkit-port=safari safari` (release), `--channel preview` (Safari TP).
-- Before Firefox wpt run, check for staged update: `cat "$HOME/Library/Caches/Mozilla/updates/Applications/Firefox Nightly/updates/0/update.status"`. If it exists, wait for update to apply (fresh profile otherwise spawns `org.mozilla.updater` which needs authorization and blocks on password prompt).
+- Before Firefox wpt run, check for staged update in its own command, before launching anything:
+  `cat "$HOME/Library/Caches/Mozilla/updates/Applications/Firefox Nightly/updates/0/update.status"`.
+  If the file exists at all (any content, including `applied`), stop and ask me to restart Fx Nightly;
+  don't run wpt until the file is gone. A fresh profile otherwise spawns `org.mozilla.updater`, which
+  needs authorization and blocks on a password prompt.
 - Re-run timing-sensitive results ~3 times before reporting stable.
 - When many failures exist, baseline before attributing to my change: `git stash`, run, `git stash pop`.
 - Re-run with added settle delay to rule out artifacts from load event or queued tasks.
