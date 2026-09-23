@@ -26,8 +26,8 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 
 # Spec research
 
-- Use `webspec-index` instead of scraping: `query HTML#concept-media-load-algorithm`, `search "tree order" -s DOM`, `refs HTML#navigate -d incoming`, `anchors "*-tree" -s DOM`, `idl Window.open\(\)`, `trace FROM TO`. Add `--format markdown`. For unmerged specs: `--pr N --diff` (grep the noise).
-- `refs ... -d incoming` quickly answers "what invokes this algorithm" (the real question behind "when does this run").
+- Use `webspec-index` (skill) instead of scraping. Add `--format markdown`. For unmerged specs: `--pr N --diff` (grep the noise).
+- `refs ... -d incoming --kind step` quickly answers "what invokes this algorithm" (the real question behind "when does this run"). For `trace`, use `--max-depth 9`.
 
 # Measuring browser behaviour in wpt
 
