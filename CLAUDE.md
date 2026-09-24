@@ -47,6 +47,10 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 
 - Chrome: `chrome --headless --disable-gpu --virtual-time-budget=8000 --dump-dom "<url>"`.
 - Firefox/Safari: raw W3C WebDriver over HTTP (POST `/session`, `/session/{id}/url`, `/session/{id}/execute/sync`, DELETE `/session/{id}`). geckodriver at `_venv3/bin/geckodriver` in bootstrapped wpt. If safaridriver hangs, fall back to `./wpt run --channel preview` on local equivalent.
+- Interactively via MCP servers (exploration only; report results from `./wpt run`):
+  - `safari-tp-mcp`: `create_tab`, `navigate_to_url`, `evaluate_javascript`, `browser_console_messages`, `screenshot`. `evaluate_javascript` takes a function body: use explicit `return` or get `null`.
+  - `chrome-canary-mcp` (isolated profile): `new_page`, `evaluate_script`, `list_console_messages`, `take_screenshot`. Every page tool needs `pageId` (from `new_page`/`list_pages`); `evaluate_script` takes a function (`() => ...`).
+  - `firefox-nightly-mcp` (temp profile): `new_page`, `evaluate_script`, `screenshot_page`, `close_firefox_session`. `evaluate_script` takes a function (`() => ...`). No console tool by default.
 
 # Writing wpt tests
 
