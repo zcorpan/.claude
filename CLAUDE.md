@@ -80,6 +80,7 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 # Comments and replies
 
 - Reply via block quote + answer pairs. Multiple pairs in one comment, no connecting prose.
+- Comments you post without me reviewing them first: attribute them. Line `Comment by Claude:`, blank line, then the entire body as ONE unbroken block quote. Every line gets `>`, including the blank separators between paragraphs (a bare `>`, never an empty line, or the quote ends and the rest renders as my own words). Quotes of other people go to `>>`. Only when I've read the draft do you post it unattributed as my own words.
 - Short comments like "Typo" are fine.
 - Code review: prefer suggestion block over prose for easy fixes; add rationale only if non-obvious.
 - When suggesting fix, verify impact carefully to avoid regressions.
