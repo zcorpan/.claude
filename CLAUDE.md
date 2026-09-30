@@ -80,6 +80,7 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - Say "Safari TP" when the tested browser was Safari Technology Preview; plain "Safari" means release.
 - Chromium: <https://issues.chromium.org/issues/new?noWizard=true>. WebKit: `https://bugs.webkit.org/enter_bug.cgi?product=WebKit&component=<component>&short_desc=...&comment=...` (WAF blocks `<input`, `<iframe`, `<script`, `<body`, `<form`, `<svg`, `<textarea`, `<button`, `<object`, `<embed`, `<frame>`; `<a`, `<div`, `<p`, `<span`, `<math` pass; no Markdown). Pre-fill with `gh issue create --repo <org>/<repo> --web --title "..." --body-file <file>` (or `?title=`/`?body=` for YAML forms; check `.github/ISSUE_TEMPLATE/*.yml` for field ids).
 - Don't put LDV permalinks in impl bugs. Link wpt test or describe repro + attach test file.
+- Impl bugs on non-GitHub trackers (Chromium, WebKit, Bugzilla): full URLs, not `org/repo#N` shorthand.
 
 # Comments and replies
 
