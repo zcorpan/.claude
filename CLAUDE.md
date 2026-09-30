@@ -22,7 +22,7 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - Prefer questions to demands.
 - Let links carry evidence; use `#11410` for same-repo issues/PRs, not full URLs.
 - Corrections: one plain sentence, no apology. Contractions. Avoid "Great question", "Certainly", "Note that".
-- Limit em-dashes; use comma, colon, parentheses, or new sentence. Firefox = Fx. en-US spelling.
+- Limit em-dashes; use comma, colon, parentheses, or new sentence. When abbreviating Firefox, use Fx (not FF). en-US spelling.
 
 # Spec research
 

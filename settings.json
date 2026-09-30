@@ -5,9 +5,14 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "opus[1m]",
+  "model": "opus",
   "enabledPlugins": {},
   "extraKnownMarketplaces": {},
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
   "theme": "dark",
   "switchModelsOnFlag": false
 }
