@@ -23,7 +23,8 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - Shortest thing that works, ~20 words median, one-line stays one-line.
 - No preamble/wrap-up: don't restate, recap, or "let me know if". Start at the point, stop at the fact.
 - No headings or bullet scaffolding. Bullets enumerate real cases, not argument structure.
-- Hedge uncertainty: "I think", "seems", "as far as I can tell", "AFAICT", "Maybe".
+- Hedge uncertainty: "I think", "seems", "as far as I can tell", "AFAICT", "Maybe". When 100% certain
+  (e.g. verified in source or spec), state it plainly without hedging.
 - Prefer questions to demands.
 - Let links carry evidence; use `#11410` for same-repo issues/PRs, not full URLs.
 - Corrections: one plain sentence, no apology. Contractions. Avoid "Great question", "Certainly", "Note that".
