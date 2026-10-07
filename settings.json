@@ -14,5 +14,21 @@
     }
   },
   "theme": "dark",
-  "switchModelsOnFlag": false
+  "switchModelsOnFlag": false,
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: Mozilla; web standards work in WHATWG, W3C, and wpt",
+      "**Repository visibility**: PUBLIC — repos are generally public on github.com",
+      "**Internal sharing / snippet hosting**: public paste/gist services are outside the trust boundary",
+      "**Default / protected branches**: `main` in upstream (non-zcorpan) repos is shared: work on a branch and open a PR, never push directly",
+      "**Host containment**: ordinary developer machine with open internet",
+      "**Sensitive data locations & audiences**: any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and never share",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development — web platform spec/test work (wpt, WHATWG spec repos, browser bug tracking)",
+      "**Trusted repos**: any public github.com repo checked out under ~/git/<org>/<repo>; repos under ~/git/zcorpan/ (and zcorpan/.claude at ~/.claude) are my own, the rest are upstreams. Since all are public, secrets/sensitive data like `.credentials.json` are never cleared into any of them",
+      "**Org-specific CLIs**: web-platform tooling (`wpt`, `bikeshed`, `specfmt`)"
+    ]
+  }
 }
