@@ -1,3 +1,8 @@
+# Scripting
+
+- Avoid nontrivial bash/zsh (loops, variable expansion, word splitting); it doesn't always do what
+  you expect. Prefer Python when possible.
+
 # Git
 
 - Commit title ≤72 chars, imperative mood, no period. Applies in every repo.
