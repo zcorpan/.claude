@@ -5,6 +5,7 @@
 
 # Git
 
+- Use SSH remotes (`git@github.com:org/repo.git`), not HTTPS; e.g. after `gh repo create`, `git remote set-url`.
 - Commit title ≤72 chars, imperative mood, no period. Applies in every repo.
 - Backtick code in commit messages so they need no editing as PR body.
 - Keep commit messages short. The title usually says it; add a body only when it needs
