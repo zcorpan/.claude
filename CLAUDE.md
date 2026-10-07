@@ -77,7 +77,9 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - Verify fix impact carefully to avoid regressions.
 - Issues containing an AI-drafted plan: open with a first-person paragraph (not `<details>`) saying it was drafted with Claude Code (model name), what was explored, and which decisions I made; then put the whole plan in a block quote. Example: validator/validator#2143.
 - Quote spec as block quote (colon intro, "...and " continuation), not inline.
-- Hedge implementation claims: "appear to run" not "runs". Report observed behavior, not code.
+- Hedge implementation claims ("appear to run", "seems to") only when inferred from test results
+  alone. If you've also read the engine source, state it with confidence ("runs"). Report observed
+  behavior, not code.
 - If problem is spec-only and no browser distinguishes, omit browsers entirely. Don't report "couldn't reproduce".
 - Live DOM Viewer demos: `https://software.hixie.ch/utilities/js/live-dom-viewer/?` + `encodeURIComponent(markup)`. Don't use `?saved=N`. Use `w()` not `console.log`. Link as `[demo](<permalink>)` (percent-encode `(` and `)`). Verify with `chrome --headless --virtual-time-budget=8000 --dump-dom "<url>"`.
 - LDV test files (unqualified): `delayed-image`, `delayed-script`, `image`, `null`, `script`, `style`, `document`, `alertdoc`, `svg`, `xml`, `xml-broken`, `xhtml`, `download`.
