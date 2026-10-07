@@ -97,4 +97,4 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - Short comments like "Typo" are fine.
 - Code review: prefer suggestion block over prose for easy fixes; add rationale only if non-obvious.
 - When suggesting fix, verify impact carefully to avoid regressions.
-- Chat review findings: start with file:line/range (e.g., `source:126832-126843` at current HEAD), so you know where to leave comment. Say which commit.
+- Chat review findings: open with "Reviewed at <short sha>" (plus related PRs reviewed together). Group findings under bold **Blockers** (wrong behavior, regressions), **Suggestions** (should change, but judgment call), **Nits** (wording, style); omit empty groups. One bullet per finding: start with file:line/range (e.g., `source:126832-126843`) or, for spec algorithms, the italicized algorithm name and step, then a colon; state the problem with a concrete case, then one sentence on the fix ("Consider ...", or "Either X, or confirm Y is intended").
