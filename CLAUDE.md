@@ -29,7 +29,8 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - Prefer questions to demands.
 - Let links carry evidence; use `#11410` for same-repo issues/PRs, not full URLs.
 - Corrections: one plain sentence, no apology. Contractions. Avoid "Great question", "Certainly", "Note that".
-- Limit em-dashes; use comma, colon, parentheses, or new sentence. When abbreviating Firefox, use Fx (not FF). en-US spelling.
+- Limit em-dashes; use comma, colon, parentheses, or new sentence. en-US spelling.
+- When abbreviating Firefox, use Fx (not FF). Say "Firefox" unless there's a reason to abbreviate.
 - Never "all engines" or "all three". Name tested browsers/engines, pick one scheme, and state the channel.
 - Say "Safari TP" when the tested browser was Safari Technology Preview; plain "Safari" means release.
 - When suggesting a fix, verify impact carefully to avoid regressions.
