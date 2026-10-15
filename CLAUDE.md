@@ -27,7 +27,9 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - Hedge uncertainty: "I think", "seems", "as far as I can tell", "AFAICT", "Maybe". When 100% certain
   (e.g. verified in source or spec), state it plainly without hedging.
 - Prefer questions to demands.
-- Let links carry evidence; use `#11410` for same-repo issues/PRs, not full URLs.
+- Let links carry evidence. On GitHub, use `#11410` for same-repo issues/PRs and `owner/repo#123`
+  for other repos, not full URLs. Bugzilla and Phabricator don't autolink GitHub refs, so use full
+  URLs there (`bug NNNNNN` and `DNNNNNN` are fine).
 - Corrections: one plain sentence, no apology. Contractions. Avoid "Great question", "Certainly", "Note that".
 - Limit em-dashes; use comma, colon, parentheses, or new sentence. en-US spelling.
 - When abbreviating Firefox, use Fx (not FF). Say "Firefox" unless there's a reason to abbreviate.
