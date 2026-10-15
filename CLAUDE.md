@@ -56,3 +56,4 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - Asked for a review: give it in chat only; don't post unless asked. When posting, wrap it in
   `<details><summary>AI review</summary>`, with "Reviewed at <short sha>" as the body's first line.
   The "AI review" summary is the attribution; no `Comment by Claude:` or block quote.
+- Don't use backticks around <short sha>.
