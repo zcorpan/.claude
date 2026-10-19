@@ -56,6 +56,9 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - When abbreviating Firefox, use Fx (not FF). Say "Firefox" unless there's a reason to abbreviate.
 - Never "all engines" or "all three". Name tested browsers/engines, pick one scheme, and state the channel.
 - Say "Safari TP" when the tested browser was Safari Technology Preview; plain "Safari" means release.
+  Include its release number ("Safari TP 254"). The UA and app bundle lack it; take the latest
+  "Safari Technology Preview" entry's `displayVersion` in `/Library/Receipts/InstallHistory.plist`
+  (read with Python `plistlib`).
 - When suggesting a fix, verify impact carefully to avoid regressions.
 
 # Spec research
