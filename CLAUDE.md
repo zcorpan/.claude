@@ -17,6 +17,15 @@
   [whatwg/meta's COMMITTING.md](https://github.com/whatwg/meta/blob/main/COMMITTING.md):
   blank line then description (omit for simple fixes). Reference issues with closing keywords only when actually resolved (prefer "Fixes"). Prefixes: `Editorial: ` (formatting/typos), `Meta: ` (ecosystem), `Review Draft Publication: `.
 
+# Claude Code plugins
+
+- Bump `version` in `.claude-plugin/plugin.json` once per push that changes what the plugin
+  ships (skills, hooks, commands), in a separate `Bump version to X.Y.Z` commit. Skip it for
+  README-only or repo-tooling changes.
+- Semver: minor for a new skill/hook/command or new behavior, patch for wording fixes and
+  clarifications, major for removing or renaming a skill or command. While below 1.0, use minor
+  for those too.
+
 # Writing
 
 Applies to chat replies and GitHub/Bugzilla/spec drafts.
