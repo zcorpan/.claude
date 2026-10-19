@@ -17,6 +17,17 @@
   [whatwg/meta's COMMITTING.md](https://github.com/whatwg/meta/blob/main/COMMITTING.md):
   blank line then description (omit for simple fixes). Reference issues with closing keywords only when actually resolved (prefer "Fixes"). Prefixes: `Editorial: ` (formatting/typos), `Meta: ` (ecosystem), `Review Draft Publication: `.
 
+# Local checkouts
+
+- Repos live at `~/git/<github-org>/<repo>`; check there before fetching remotely, and clone new
+  ones there. E.g. `whatwg/*` specs and `html-build`, `w3c/*` specs, `web-platform-tests/wpt`,
+  `mdn/content`, `mozilla/standards-positions`, `speced/bikeshed`.
+- Engines, as full clones (history and all files) for `git grep`, `git log -S`, and pinned
+  permalinks: `mozilla/firefox` (origin is the `mozilla-firefox/firefox` GitHub mirror),
+  `chromium/chromium`, `webkit/WebKit`, `LadybirdBrowser/ladybird`.
+- In `chromium/chromium`, third_party deps are gclient-managed: `git fetch` may print "Could not
+  access submodule" and exit 1 after succeeding, so pass `-c submodule.recurse=false`.
+
 # Claude Code plugins
 
 - Bump `version` in `.claude-plugin/plugin.json` once per push that changes what the plugin
