@@ -7,7 +7,8 @@
 
 - Use SSH remotes (`git@github.com:org/repo.git`), not HTTPS; e.g. after `gh repo create`, `git remote set-url`.
 - Commit title ≤72 chars, imperative mood, no period. Applies in every repo.
-- Backtick code in commit messages so they need no editing as PR body.
+- Backtick code in commit messages so they need no editing as PR body (except in WHATWG spec
+  repos, below).
 - Keep commit messages short. The title usually says it; add a body only when it needs
   explaining, usually 1-2 sentences. Go longer only when the change genuinely needs more
   explanation (e.g. a non-obvious why); bullets are fine there if they list real cases.
@@ -17,6 +18,8 @@
 - In WHATWG spec repos, follow
   [whatwg/meta's COMMITTING.md](https://github.com/whatwg/meta/blob/main/COMMITTING.md):
   blank line then description (omit for simple fixes). Reference issues with closing keywords only when actually resolved (prefer "Fixes"). Prefixes: `Editorial: ` (formatting/typos), `Meta: ` (ecosystem), `Review Draft Publication: `.
+  No backticks in commit messages unless needed for disambiguation; add them in the PR
+  description where needed. End the description with `Tests: <wpt PR URL>.`, then `Fixes #N.`
 
 # Local checkouts
 
