@@ -52,8 +52,10 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
   (e.g. verified in source or spec), state it plainly without hedging.
 - Prefer questions to demands.
 - Let links carry evidence. On GitHub, use `#11410` for same-repo issues/PRs and `owner/repo#123`
-  for other repos, not full URLs. Bugzilla and Phabricator don't autolink GitHub refs, so use full
-  URLs there (`bug NNNNNN` and `DNNNNNN` are fine).
+  for other repos, not full URLs. For commits, a short SHA autolinks only in the same repo; link
+  other-repo commits with the full `https://github.com/<org>/<repo>/commit/<full sha>` URL.
+  Bugzilla and Phabricator don't autolink GitHub refs, so use full URLs there (`bug NNNNNN` and
+  `DNNNNNN` are fine).
 - Corrections: one plain sentence, no apology. Contractions. Avoid "Great question", "Certainly", "Note that".
 - Limit em-dashes; use comma, colon, parentheses, or new sentence. en-US spelling.
 - When abbreviating Firefox, use Fx (not FF). Say "Firefox" unless there's a reason to abbreviate.
@@ -80,11 +82,19 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 # Comments and replies
 
 - Reply via block quote + answer pairs. Multiple pairs in one comment, no connecting prose.
-- Comments you post without me reviewing them first: attribute them. Line `Comment by Claude:`, blank line, then the entire body as ONE unbroken block quote. Every line gets `>`, including the blank separators between paragraphs (a bare `>`, never an empty line, or the quote ends and the rest renders as my own words). Quotes of other people go to `>>`. Only when I've read the draft do you post it unattributed as my own words.
+- Comments you post without me reviewing them first: attribute them. Line `Comment by AI:`, blank line, then the entire body as ONE unbroken block quote. Every line gets `>`, including the blank separators between paragraphs (a bare `>`, never an empty line, or the quote ends and the rest renders as my own words). Quotes of other people go to `>>`. Only when I've read the draft do you post it unattributed as my own words.
 - Short comments like "Typo" are fine.
-- Code review: prefer suggestion block over prose for easy fixes; add rationale only if non-obvious.
 - Chat review findings: open with "Reviewed at <short sha>" (plus related PRs reviewed together). Group findings under bold **Blockers** (wrong behavior, regressions), **Suggestions** (should change, but judgment call), **Nits** (wording, style); omit empty groups. One bullet per finding: start with file:line/range (e.g., `source:126832-126843`) or, for spec algorithms, the italicized algorithm name and step, then a colon; state the problem with a concrete case, then one sentence on the fix ("Consider ...", or "Either X, or confirm Y is intended").
 - Asked for a review: give it in chat only; don't post unless asked. When posting, wrap it in
   `<details><summary>AI review</summary>`, with "Reviewed at <short sha>" as the body's first line.
-  The "AI review" summary is the attribution; no `Comment by Claude:` or block quote.
+  The "AI review" summary is the attribution; no `Comment by AI:` or block quote.
+- An "AI review and fixes" comment (findings plus the fixes I pushed for them): wrap it in
+  `<details><summary>AI review and fixes</summary>`. Body: "Reviewed at …" line, then one short
+  paragraph on what was reviewed and how the fixes were self-reviewed (lint, build, which
+  browsers ran which tests), then a bold **Open questions** section for questions to the author and
+  follow-up items (each standalone, linking back to its finding), then the usual groups. Each
+  finding ends with "Fixed in <sha>" plus a few words on how, or says why it wasn't changed and
+  points to its open question. If an earlier suggestion of mine was wrong or caused the problem,
+  say so. Only include what's relevant to the author: no review process details (rounds,
+  reviewers, which fixes were re-reviewed).
 - Don't use backticks around <short sha>.
