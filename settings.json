@@ -3,7 +3,6 @@
     "pr": ""
   },
   "permissions": {
-    "defaultMode": "auto",
     "allow": [
       "Bash(gh pr view *)",
       "Bash(gh pr diff *)",
@@ -12,17 +11,18 @@
       "Bash(gh pr checkout *)",
       "Bash(git fetch *)",
       "Bash(webspec-index *)"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "model": "opus",
   "enabledPlugins": {},
   "extraKnownMarketplaces": {},
+  "promptCacheTtl": "1h",
   "modelSettings": {
     "claude-opus-5-5": {
       "effortLevel": "high"
     }
   },
-  "promptCacheTtl": "1h",
   "theme": "dark",
   "switchModelsOnFlag": false,
   "autoMode": {
@@ -40,5 +40,8 @@
       "**Trusted repos**: any public github.com repo checked out under ~/git/<org>/<repo>; repos under ~/git/zcorpan/ (and zcorpan/.claude at ~/.claude) are my own, the rest are upstreams. Since all are public, secrets/sensitive data like `.credentials.json` are never cleared into any of them",
       "**Org-specific CLIs**: web-platform tooling (`wpt`, `bikeshed`, `specfmt`)"
     ]
+  },
+  "env": {
+    "CLOUDSDK_ACTIVE_CONFIG_NAME": "httparchive"
   }
 }
