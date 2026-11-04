@@ -82,6 +82,6 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 # Comments and replies
 
 - Reply via block quote + answer pairs. Multiple pairs in one comment, no connecting prose.
-- Comments you post without me reviewing them first: attribute them. Line `Comment by AI:`, blank line, then the entire body as ONE unbroken block quote. Every line gets `>`, including the blank separators between paragraphs (a bare `>`, never an empty line, or the quote ends and the rest renders as my own words). Quotes of other people go to `>>`. Only when I've read the draft do you post it unattributed as my own words.
+- Formatting block quotes: blank line, then the entire body as ONE unbroken block quote. Every line gets `>`, including the blank separators between paragraphs (a bare `>`, never an empty line, or the quote ends and the rest renders as my own words). Nested block quotes go to `>>`.
 - Short comments like "Typo" are fine.
 - Don't use backticks around <short sha>.
