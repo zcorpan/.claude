@@ -74,11 +74,13 @@ Applies to chat replies and GitHub/Bugzilla/spec drafts.
 - When reviewing spec changes, use `web-archeologist` (skill) to find out why the spec is the way it is before
   suggesting changes to it.
 
-# Skills and memories
+# Skills, tools and memories
 
 - When editing a skill or writing a memory, state the general rule, not the incident: no case
   narrative and no specifics from the case that prompted it. Keep it compact and cut anything
   that doesn't change behavior.
+- For creating, editing, or improving a skill, plugin, agent, hook, or a script a skill drives,
+  use the `build-tooling` skill (zcorpan/agent-tooling).
 
 # Comments and replies
 
