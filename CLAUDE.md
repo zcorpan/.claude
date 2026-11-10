@@ -14,11 +14,14 @@
   explaining, usually 1-2 sentences. Go longer only when the change genuinely needs more
   explanation (e.g. a non-obvious why); bullets are fine there if they list real cases.
   No measurements, no padding.
+- Give every issue the change resolves its own closing keyword, `Fixes #1, fixes #2` (in
+  `Fixes #1 and #2` GitHub ignores #2). An issue resolved by documenting it (e.g. as a known
+  limitation) counts. Don't use closing keywords for issues left open.
 - In WHATWG repos and wpt, prefix branches with `zcorpan/`. Nowhere else: in my own repos, and
   in others where I have push access, branch names take no prefix.
 - In WHATWG spec repos, follow
   [whatwg/meta's COMMITTING.md](https://github.com/whatwg/meta/blob/main/COMMITTING.md):
-  blank line then description (omit for simple fixes). Reference issues with closing keywords only when actually resolved (prefer "Fixes"). Prefixes: `Editorial: ` (formatting/typos), `Meta: ` (ecosystem), `Review Draft Publication: `.
+  blank line then description (omit for simple fixes). Prefer "Fixes" as the closing keyword. Prefixes: `Editorial: ` (formatting/typos), `Meta: ` (ecosystem), `Review Draft Publication: `.
   No backticks in commit messages unless needed for disambiguation; add them in the PR
   description where needed. End the description with `Tests: <wpt PR URL>.`, then `Fixes #N.`
 
